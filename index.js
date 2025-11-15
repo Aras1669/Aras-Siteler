@@ -1,0 +1,1 @@
+function NoteBookGit() {window.open("https://aras1669.github.io/notebook/")} function GoogleHızlıGit() {window.open("https://aras1669.github.io/Google-Hizli/")}
