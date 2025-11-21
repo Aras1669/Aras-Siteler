@@ -1,3 +1,32 @@
+async function hash(text){
+    const msgUint8 = new TextEncoder().encode(text);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+// ANAHTAR DOSYANIN HASH'I
+const dogruHash = "e5cdb64a2b6b182c50c3ef47740e2985606d075ea82b79788b2a66583cd2ccfb";
+
+document.getElementById("fileInput").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    const text = await file.text();
+    const gelenHash = await hash(text);
+
+    if(gelenHash === dogruHash){
+        document.getElementById("Şifre").style.display = "none";
+        document.getElementById("icerik").style.display = "block";
+    } else {
+        alert("Anahtar dosyası hatalı!");
+    }
+});
+
+
+
+
+
+
+
 function NoteBookGit() {
     window.open("https://aras1669.github.io/Note-Book/")
 }
