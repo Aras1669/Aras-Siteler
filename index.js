@@ -7,7 +7,7 @@ async function hash(text){
 }
 */
 
-const dogruHash = "Aras";
+const dogruHash = "Bu_Siteyi_Aras_Yaptı";
 
 function ParolaDeneme() {
     const gelenHash = document.getElementById("Parola").value;
