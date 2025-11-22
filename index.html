@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="Şifre">
-        <h2>Lütfen Şifre Dosyasını Yükleyin</h2>
-        <input type="file" id="fileInput">
+    <div id="Sifre" style="display: block;">
+        <div id="SifreKismi">
+            <input type="password" id="Parola">
+            <br>
+            <button id="SiteyeGir" onclick="ParolaDeneme()">Siteye Gir</button>
+        </div>
     </div>
-    <div id="icerik" style="display: none;">
+    <div id="İcerik" style="display: none;">
         <br>
-        <button onclick="NoteBookGit()">
+        <button class="Siteler" onclick="NoteBookGit()">
             <div id="NoteBookSimge"></div>
             <div class="Yazı">Note Book</div>
         </button>
         <br>
         <br>
         <br>
-        <button onclick="GoogleHızlıGit()">
+        <button class="Siteler" onclick="GoogleHızlıGit()">
             <div id="GoogleHızlıSimge"></div>
             <div class="Yazı">Google Hızlı</div>
         </button>
