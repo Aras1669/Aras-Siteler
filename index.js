@@ -1,25 +1,24 @@
+/*
 async function hash(text){
     const msgUint8 = new TextEncoder().encode(text);
     const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 }
+*/
 
-// ANAHTAR DOSYANIN HASH'I
-const dogruHash = "e5cdb64a2b6b182c50c3ef47740e2985606d075ea82b79788b2a66583cd2ccfb";
+const dogruHash = "Aras";
 
-document.getElementById("fileInput").addEventListener("change", async (e) => {
-    const file = e.target.files[0];
-    const text = await file.text();
-    const gelenHash = await hash(text);
+function ParolaDeneme() {
+    const gelenHash = document.getElementById("Parola").value;
 
     if(gelenHash === dogruHash){
-        document.getElementById("Şifre").style.display = "none";
-        document.getElementById("icerik").style.display = "block";
+        document.getElementById("Sifre").style.display = "none";
+        document.getElementById("İcerik").style.display = "block";
     } else {
-        alert("Anahtar dosyası hatalı!");
+        alert("Şifre hatalı!");
     }
-});
+};
 
 
 
@@ -38,4 +37,5 @@ function GoogleHızlıGit() {
 /*
     window.open("http://127.0.0.1:5500/Google%20H%C4%B1zl%C4%B1/")
     window.open("http://127.0.0.1:5500/NoteBook/")
+0225-221224062812-01210122-2801202411
 */
